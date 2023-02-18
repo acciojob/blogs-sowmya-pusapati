@@ -23,7 +23,7 @@ public class Blog{
     @JoinColumn
     private User user;
 
-    @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "blog_id",cascade = CascadeType.ALL)
     private List<Image> imageList=new ArrayList<>();
 
     public Blog() {

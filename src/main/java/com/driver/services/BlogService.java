@@ -20,6 +20,8 @@ public class BlogService {
 
     @Autowired
     UserRepository userRepository1;
+    @Autowired
+    ImageRepository imageRepository;
 
     public Blog createAndReturnBlog(Integer userId, String title, String content) {
         //create a blog at the current time
@@ -44,8 +46,13 @@ public class BlogService {
     public void deleteBlog(int blogId){
         //delete blog and corresponding images
         Blog blog=blogRepository1.findById(blogId).get();
-         blog.getImageList().remove(blogId);
+        List<Image> imagelist=blog.getImageList();
+        for(Image image:imagelist) {
+            imageRepository.delete(image);
+        }
         blogRepository1.deleteById(blogId);
+
+
 
     }
 }

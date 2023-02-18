@@ -13,7 +13,7 @@ public class Image{
 
     @ManyToOne
     @JoinColumn
-    private Blog blog;
+    private Blog blog_id;
 
     public Image() {
     }
@@ -25,11 +25,11 @@ public class Image{
     }
 
     public Blog getBlog() {
-        return blog;
+        return blog_id;
     }
 
     public void setBlog(Blog blog) {
-        this.blog = blog;
+        this.blog_id = blog;
     }
 
     public int getId() {
