@@ -36,19 +36,19 @@ public class User {
         this.blogList = blogList;
     }
 
-    public int getUserId() {
+    public int getId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setId(int userId) {
         this.userId = userId;
     }
 
-    public String getUserName() {
+    public String getUsername() {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    public void setUsername(String userName) {
         this.userName = userName;
     }
 

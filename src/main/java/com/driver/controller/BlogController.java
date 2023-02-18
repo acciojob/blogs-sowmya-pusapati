@@ -14,10 +14,10 @@ import java.util.List;
 @RequestMapping("/blogs")
 public class BlogController {
     @Autowired
-    BlogService blogService;
+    BlogService blogService=new BlogService();
 
     @PostMapping
-    public ResponseEntity createBlog(@RequestParam Integer userId ,
+    public ResponseEntity<Void> createBlog(@RequestParam Integer userId ,
                                      @RequestParam String title,
                                      @RequestParam String content) {
         // Create a blog and add it under given user

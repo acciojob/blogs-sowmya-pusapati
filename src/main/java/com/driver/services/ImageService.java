@@ -16,7 +16,7 @@ public class ImageService {
     @Autowired
     ImageRepository imageRepository2;
 
-    public Image addImage(Integer blogId, String description, String dimensions){
+    public void addImage(Integer blogId, String description, String dimensions){
         //add an image to the blog
         Image image=new Image();
         image.setDescription(description);
@@ -29,7 +29,7 @@ public class ImageService {
 
         blogRepository2.save(blog);
 
-       return image;
+
 
     }
 

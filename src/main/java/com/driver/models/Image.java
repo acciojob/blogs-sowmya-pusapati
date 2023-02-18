@@ -32,11 +32,11 @@ public class Image{
         this.blog = blog;
     }
 
-    public int getImageId() {
+    public int getId() {
         return imageId;
     }
 
-    public void setImageId(int imageId) {
+    public void setId(int imageId) {
         this.imageId = imageId;
     }
 
