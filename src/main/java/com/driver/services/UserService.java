@@ -13,7 +13,7 @@ public class UserService {
     @Autowired
     UserRepository userRepository3;
 
-    public void createUser(String username, String password){
+    public User createUser(String username, String password){
       User user=new User();
       user.setUsername(username);
       user.setPassword(password);
@@ -22,7 +22,7 @@ public class UserService {
 
       userRepository3.save(user);
 
-
+     return user;
     }
 
     public void deleteUser(int userId){
@@ -30,13 +30,13 @@ public class UserService {
 
     }
 
-    public void updateUser(Integer id, String password){
+    public User updateUser(Integer id, String password){
 
       User user=userRepository3.findById(id).get();
       user.setPassword(password);
       userRepository3.save(user);
 
-
+        return user;
 
     }
 }
