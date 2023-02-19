@@ -51,17 +51,14 @@ public class ImageService {
         String dim[]=dimensions.split("X");
         int imageLength=Integer.parseInt(dim[0]);
         int imageBreadth=Integer.parseInt(dim[1]);
-        int imagedim=imageLength*imageBreadth;
+
 
         String screendim[]=screenDimensions.split("X");
         int screenlength=Integer.parseInt(screendim[0]);
         int screenBreadth=Integer.parseInt(screendim[1]);
-        int screendime=screenlength*screenBreadth;
 
-        if(imagedim<screendime)
-        {
-            count=screendime/imagedim;
-        }
+
+        count=((screenlength/imageLength)*(screenBreadth/imageBreadth));
         return count;
 
 
